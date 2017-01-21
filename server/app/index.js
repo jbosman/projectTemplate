@@ -39,7 +39,7 @@ module.exports = function (db) {
     });
 
     // Error catching endware.
-    app.use(function (err, req, res, next) {
+    app.use(function (err, req, res, next) { // eslint-disable-line no-unused-vars
         console.error(err);
         console.error(err.stack);
         res.status(err.status || 500).send(err.message || 'Internal server error.');
